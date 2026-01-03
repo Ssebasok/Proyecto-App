@@ -6,6 +6,8 @@ use App\Http\Controllers\Api\profile\PasswordController;
 use App\Http\Controllers\Api\transaction\regTransactionController;
 use App\Http\Controllers\Api\profile\profileController;
 use App\Http\Controllers\Api\transaction\delTransactionController;
+use App\Http\Controllers\Api\Books\regBookController;
+use App\Http\Controllers\Api\Books\delBookController;
 
 # Home 
 Route::middleware(['auth:api'])->group(function () {
@@ -25,9 +27,6 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('/crateBook/create', [regBookController::class, 'createBook']);
     Route::delete('/Book/delete', [delBookController::class, 'deleteBook']);
 });
-
-
-
 
 
 
