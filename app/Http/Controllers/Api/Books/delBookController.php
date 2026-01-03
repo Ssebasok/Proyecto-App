@@ -13,7 +13,7 @@ class delBookController extends Controller
         if(!$user){
             return response()->json([
                 'success' => 0,
-                'message' => 'Usuario no autenticado'
+                'message' => 'User not authenticated'
             ], 401);
         }
 
@@ -30,7 +30,7 @@ class delBookController extends Controller
         if($book->user_id !== $user->id){
             return response()->json([
                 'success' => 0,
-                'message' => 'No tienes permiso para eliminar este libro'
+                'message' => 'You do not have permission to delete this book'
             ], 403);
         }
 
